@@ -94,7 +94,7 @@ const Contact = () => {
             </a>
 
             <a
-              href="https://linkedin.com/in/arbajshaikh"
+              href="https://www.linkedin.com/in/arbaj-shaikh-b9a8b7228/"
               target="_blank"
               rel="noreferrer"
               className="contact-channel glass hoverable"
