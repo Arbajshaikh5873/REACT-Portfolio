@@ -1,0 +1,121 @@
+/* ═══════════════════════════════════════════
+   PROJECTS SECTION
+   ═══════════════════════════════════════════ */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 28px;
+  margin-top: 60px;
+}
+
+.project-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color 0.4s var(--ease-out-expo);
+  perspective: 800px;
+}
+
+.project-card:hover {
+  border-color: var(--border-hover);
+}
+
+.project-card-inner {
+  padding: 36px;
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
+
+/* Project number */
+.project-number {
+  font-family: 'Space Grotesk', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  letter-spacing: 3px;
+  margin-bottom: 24px;
+}
+
+.project-card h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+
+.project-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* Tech tags */
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.project-tech-tag {
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: rgba(167, 139, 250, 0.08);
+  color: var(--accent-violet);
+  border: 1px solid rgba(167, 139, 250, 0.15);
+}
+
+/* Links */
+.project-links {
+  display: flex;
+  gap: 16px;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: var(--accent-blue);
+}
+
+/* Accent bar at top of card */
+.project-accent {
+  height: 3px;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover .project-accent {
+  opacity: 1;
+}
+
+.project-accent--violet {
+  background: var(--gradient-main);
+}
+
+.project-accent--blue {
+  background: var(--gradient-cool);
+}
+
+.project-accent--warm {
+  background: var(--gradient-warm);
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-card-inner {
+    padding: 28px;
+  }
+}

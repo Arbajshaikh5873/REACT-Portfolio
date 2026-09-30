@@ -1,0 +1,49 @@
+/* ═══════════════════════════════════════════
+   MARQUEE / TICKER
+   ═══════════════════════════════════════════ */
+.marquee-section {
+  padding: 40px 0;
+  overflow: hidden;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 48px;
+  animation: marquee-scroll 30s linear infinite;
+  width: max-content;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  font-family: 'Space Grotesk', monospace;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.marquee-item:hover {
+  color: var(--accent-violet);
+}
+
+.marquee-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-violet);
+  opacity: 0.4;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

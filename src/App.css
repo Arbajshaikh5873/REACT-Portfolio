@@ -1,0 +1,23 @@
+/* ═══════════════════════════════════════════
+   APP LAYOUT
+   ═══════════════════════════════════════════ */
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Section dividers — subtle gradient lines between sections */
+.section-divider {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--border-subtle) 20%,
+    rgba(167, 139, 250, 0.2) 50%,
+    var(--border-subtle) 80%,
+    transparent 100%
+  );
+}
